@@ -82,7 +82,7 @@ for(let x = 0; x<10; x++)
     {
         if(y % 2 == 0)
         {
-            generateHex().position = new Point(x*636, y*182)
+            generateHex().position = new Point(x*618, y*182)
         }
         else
         {

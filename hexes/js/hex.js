@@ -3,7 +3,7 @@ function random(min, max) {
     return Math.random() * (max - min) + min;
 }
 
-function generateCat(){
+function generateHex(){
     // Create a Paper.js Path to draw a line into it:
     var hexagon = new Path({closed: true});
     // Color our path black
@@ -73,10 +73,15 @@ function generateCat(){
     return hexa
 }
 
-//here we make a grid of 10x10 cats
+//here we make a grid of hexagons
 for(let x = 0; x<10; x++){
     for(let y = 0; y<10; y++){
-        generateCat().position = new Point(x*500, y*420)
+        if(y % 2 = 0){
+            generateHex().position = new Point(x*400, y*400)
+        }
+        else{
+            generateHex().position = new Point(x*200, y*400)
+        }
     }
 }
 //zooming a bit out for a better view

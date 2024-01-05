@@ -82,11 +82,11 @@ for(let x = 0; x<10; x++)
     {
         if(y % 2 == 0)
         {
-            generateHex().position = new Point(x*400, y*400)
+            generateHex().position = new Point(x*500, y*200)
         }
         else
         {
-            generateHex().position = new Point(x*200, y*400)
+            generateHex().position = new Point(x*250, y*200)
         }
     }
 }

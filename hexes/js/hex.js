@@ -100,7 +100,7 @@ let p_bot_base = 1
 // Probabilistic colours
 let mode = 'prob'
 
-if mode == 'prob'
+if(mode == 'prob')
 {
     p_top_base = 0.1
     p_bot_base = 0.01

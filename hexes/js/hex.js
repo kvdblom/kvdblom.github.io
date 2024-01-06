@@ -115,10 +115,14 @@ if(mode == 'prob')
     p_edg_base = 0
 }
 
+// Determine number of columns and rows
+let n_cols = 12
+let n_rows = 25
+
 // Make a grid of hexagons
-for(let x = 0; x<10; x++)
+for(let x = 0; x<n_cols; x++)
 {
-    for(let y = 0; y<10; y++)
+    for(let y = 0; y<n_rows; y++)
     {
         p_top = y*p_top_base
         p_bot = y*p_bot_base

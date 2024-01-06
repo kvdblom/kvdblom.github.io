@@ -7,7 +7,7 @@ function random(min, max)
 // Get random or default colour based on probability
 function getProbColour(prob)
 {
-    if(prob <= random(0,1))
+    if(random(0,1) < prob)
     {
         var colour = Color.random()
     }

@@ -20,7 +20,7 @@ function getProbColour(prob, edge)
     }
     else
     {
-        var colour = 'ivory'
+        var colour = def_col
     }
 
     return colour;

@@ -5,8 +5,15 @@ function random(min, max)
 }
 
 // Get random or default colour based on probability
-function getProbColour(prob)
+function getProbColour(prob, edge)
 {
+    let def_col = 'ivory'
+
+    if(edge == true)
+    {
+        def_col = 'gainsboro'
+    }
+
     if(random(0,1) < prob)
     {
         var colour = Color.random()
@@ -19,13 +26,13 @@ function getProbColour(prob)
     return colour;
 }
 
-// Provide probabilities for the top or bottom to be coloured
-function generateHex(p_bot, p_top)
+// Provide probabilities for the top, bottom, and edge to be coloured
+function generateHex(p_bot, p_top, p_edge)
 {
     // Create a Paper.js Path to draw a line into it:
     var hexagon = new Path({closed: true});
     // Color our path black
-    hexagon.strokeColor = Color.random()//'violet';
+    hexagon.strokeColor = getProbColour(p_edge, true)//Color.random()//'violet';
     hexagon.strokeWidth = 18
     
     // How many points do we want our object to have
@@ -59,7 +66,7 @@ function generateHex(p_bot, p_top)
         ));
     }
 
-    let fillTop = getProbColour(p_top)
+    let fillTop = getProbColour(p_top, false)
     fillTop.lightness = random(0.6,1)
     topHalf.fillColor = fillTop//"turquoise";
     topHalf.position.x += 200;
@@ -75,7 +82,7 @@ function generateHex(p_bot, p_top)
         ));
     }
     
-    let fillBot = getProbColour(p_bot)
+    let fillBot = getProbColour(p_bot, false)
     fillBot.lightness = random(0.6,1)
     botHalf.fillColor = fillBot//"pink";
     botHalf.position.x += 200;
@@ -96,6 +103,7 @@ function generateHex(p_bot, p_top)
 // Random colours
 let p_top_base = 1
 let p_bot_base = 1
+let p_edg_base = 1
 
 // Probabilistic colours
 let mode = 'prob'
@@ -104,6 +112,7 @@ if(mode == 'prob')
 {
     p_top_base = 0.1
     p_bot_base = 0.01
+    p_edg_base = 0
 }
 
 // Make a grid of hexagons
@@ -116,11 +125,11 @@ for(let x = 0; x<10; x++)
 
         if(y % 2 == 0)
         {
-            generateHex(p_top, p_bot).position = new Point(x*636, y*182)
+            generateHex(p_top, p_bot, p_edg_base).position = new Point(x*636, y*182)
         }
         else
         {
-            generateHex(p_top, p_bot).position = new Point(318+(x*636), y*182)
+            generateHex(p_top, p_bot, p_edg_base).position = new Point(318+(x*636), y*182)
         }
     }
 }

@@ -9,14 +9,14 @@ function getProbColour(prob)
 {
     if(prob <= random(0,1))
     {
-        let colour = Color.random()
+        var colour = Color.random()
     }
     else
     {
-        let colour = 'ivory'
+        var colour = 'ivory'
     }
 
-    return colour
+    return colour;
 }
 
 // Provide probabilities for the top or bottom to be coloured

@@ -1,10 +1,26 @@
-//helping function for a nicer random value
+// Helper function for a nicer random values
 function random(min, max)
 {
     return Math.random() * (max - min) + min;
 }
 
-function generateHex()
+// Get random or default colour based on probability
+function getProbColour(prob)
+{
+    if(prob <= random(0,1)
+    {
+        let colour = Color.random()
+    }
+    else
+    {
+        let colour = 'ivory'
+    }
+
+    return colour
+}
+
+// Provide probabilities for the top or bottom to be coloured
+function generateHex(p_bot, p_top)
 {
     // Create a Paper.js Path to draw a line into it:
     var hexagon = new Path({closed: true});
@@ -42,8 +58,8 @@ function generateHex()
             radius * Math.sin(angle * i)
         ));
     }
-    
-    let fillTop = Color.random()
+
+    let fillTop = getProbColour(p_top)
     fillTop.lightness = random(0.6,1)
     topHalf.fillColor = fillTop//"turquoise";
     topHalf.position.x += 200;
@@ -59,7 +75,7 @@ function generateHex()
         ));
     }
     
-    let fillBot = Color.random()
+    let fillBot = getProbColour(p_bot)
     fillBot.lightness = random(0.6,1)
     botHalf.fillColor = fillBot//"pink";
     botHalf.position.x += 200;
@@ -75,20 +91,39 @@ function generateHex()
     return hexa
 }
 
-//here we make a grid of hexagons
+// Set colour probabilities
+
+// Random colours
+let p_top_base = 1
+let p_bot_base = 1
+
+// Probabilistic colours
+let mode = 'prob'
+
+if mode == 'prob'
+{
+    p_top_base = 0.1
+    p_bot_base = 0.01
+}
+
+// Make a grid of hexagons
 for(let x = 0; x<10; x++)
 {
     for(let y = 0; y<10; y++)
     {
+        p_top = y*p_top_base
+        p_bot = y*p_bot_base
+
         if(y % 2 == 0)
         {
-            generateHex().position = new Point(x*636, y*182)
+            generateHex(p_top, p_bot).position = new Point(x*636, y*182)
         }
         else
         {
-            generateHex().position = new Point(318+(x*636), y*182)
+            generateHex(p_top, p_bot).position = new Point(318+(x*636), y*182)
         }
     }
 }
-//zooming a bit out for a better view
+
+// Zoom out a bit for a better view
 view.scale(0.3, view.bounds.topLeft)

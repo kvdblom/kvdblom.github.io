@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en" >
+
+<head>
+  <meta http-equiv="cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="utf-8">
+  <title>SE4ML</title>
+  
+  <link rel="stylesheet" type="text/css" href="../style/screen.css" >
+</head>
+
+<body>
+  <header style="margin-top:30px;">
+  </header>
+  <div class="main wrapper clearfix">
+    <div id="content" style="width:100%;">
+      <article style="margin: 0 10px 0 10px;">
+	<h1>SE4ML &#8212; Software Engineering for Machine Learning (2019-2023)<a href="../index.php" style="float: right;">Home</a></h1>
+
+	<p align="justify">
+	In this project we asked ourselves what changes in the software engineering process when the software includes machine learning components. Can best practices for software engineering still be applied directly, or do we need something new? How to ensure the trustworthiness of the machine learning components? To which extend is automated machine learning adopted in the context of software engineering with machine learning?
+	</p>
+
+	<p align="justify">
+	Project website: <a target="_blank" href="https://se-ml.github.io/">https://se-ml.github.io/</a>
+	</p>
+	<p align="justify">
+	Collaborators: Alex Serban, Holger Hoos &amp; Joost Visser</span></li>
+	</p>
+
+        <h3>Adoption and effects of software engineering practices for machine learning</h3>
+	<p align="justify">
+	We first investigated which best practices related to software engineering for machine learning existed in the literature. Using a questionnaire, we then studied to which extend these practices were adopted. Finally, we also evaluated the perceived effects of adopting these practices, which may aid in prioritising which practices to adopt first.
+	  <ul class="publication-list">
+	   <li>[<a target="_blank" href="https://doi.org/10.1145/3382494.3410681">URL</a>|<a target="_blank" href="https://www.youtube.com/watch?v=rKWLYHKwsOw&t">video</a>|<a target="_blank" href="../bibs/SerEtAl20.bib">bib</a>] Serban A., Blom K. van der, Hoos H. &amp; Visser J. (2020-10-06), Adoption and Effects of Software Engineering Best Practices in Machine Learning. In: <i>Proceedings of the 14th ACM / IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)</i>: 12 pages.<br><span class="type">Conference paper: refereed</span></li>
+
+	    <li>[<a target="_blank" href="https://doi.org/10.1016/j.jss.2023.111907">URL</a>|<a target="_blank" href="../bibs/SerEtAl23.bib">bib</a>] Serban Alex, Blom K. van der, Hoos. H. &amp; Visser J. (2023-11-28), Software engineering practices for machine learning - Adoption, effects, and team assessment. In: <i>Journal of Systems and Software</i>: Elsevier. 111907.<br><span class="type">Journal paper: refereed</span></li>
+          </ul>
+       </p>
+
+        </p>
+	<h3>Practices for trustworthy machine learning</h3>
+	In addition to new engineering practices that connect fairly closely to categories that were already present in traditional software engineering, machine learning involves larges amounts of data, models and automated decision making. These raise questions about the trustworthiness of these techniques, leading to a need for a new category of practices specificially dealing with this issue. In our work we introduce such practices, and study their adoption by development teams.
+        <p align="justify">
+          <ul class="publication-list">
+
+           <li>[<a target="_blank" href="https://doi.org/10.1109/WAIN52551.2021.00021">URL</a>|<a target="_blank" href="../bibs/SerEtAl21.bib">bib</a>] Serban A., Blom K. van der, Hoos H. &amp; Visser J. (2021-05-30), Practices for Engineering Trustworthy Machine Learning Applications. In: <i>2021 IEEE/ACM 1st Workshop on AI Engineering - Software Engineering for AI (WAIN)</i>: IEEE. 97-100.<br><span class="type">Workshop paper: refereed</span></li>
+
+          </ul>
+        </p>
+
+	<h3>Adoption of automated machine learning in SE4ML</h3>
+	In recent years automated machine learning (AutoML) has appeared as a new development to make the adoption of machine learning faster and easier. We studied to which extend these new techniques are actually adopted in practice, and what benefits people see in practice compared to the promise of AutoML.
+        <p align="justify">
+	  <ul class="publication-list">
+
+           <li>[<a target="_blank" href="../papers/automl_2021.pdf">PDF</a>|<a target="_blank" href="../posters/automl_2021.pdf">poster</a>|<a target="_blank" href="../bibs/BloEtAl21.bib">bib</a>] Blom K. van der, Serban A., Hoos H. &amp; Visser J. (2021-07-23), AutoML Adoption in ML Software. In: <i>8th ICML Workshop on Automated Machine Learning</i>: 13 pages.<br><span class="type">Workshop paper: refereed</span></li>
+
+	    <li>[<a target="_blank" href="../papers/pgmo_2022.pdf">PDF</a>|<a target="_blank" href="../slides/pgmo_2022.pdf">slides</a>] Blom K. van der (2022-11-30), AutoML - Benefits, Reality, Future. In: <i>PGMO Days 2022</i>. Palaiseau, France.<br><span class="type">Talk</span></li>
+
+            <li>[<a target="_blank" href="../posters/coseal_2023_adoption.pdf">poster</a>] Blom K. van der, Serban A., Hoos H. &amp; Visser J. (2023-03-06), AutoML Adoption: Insights from Interviews. In: <i>COSEAL Workshop 2023</i>. Paris, France.<br><span class="type">Poster</span></li>
+          </ul>
+        </p>
+
+        <h3>Guest lectures</h3>
+	<p align="justify">
+	For two years I gave a guest lecture related to this project for the machine learning course as part of the bachelor artificial intelligence at Leiden University.
+          <ul class="publication-list">
+	    <li>[<a target="_blank" href="../teaching/ml_practices_2022.pdf">slides</a>] Blom K. van der (2022-05-06), Best Practices: Software Engineering, Machine Learning, and AutoML. In: <a target="_blank" href="https://www.universiteitleiden.nl/en/staffmembers/mitra-baratchi">Baratchi M.</a> (Lecturer) <i>Machine Learning</i>: Feb. 2021-June 2022.<br><span class="type">Guest lecture, Bachelor Artificial Intelligence, 2nd year</span></li>
+            <li>[<a target="_blank" href="../teaching/ml_practices_2021.pdf">slides</a>] Blom K. van der (2021-05-21), Best Practices: Software Engineering, Machine Learning, and AutoML. In: <a target="_blank" href="https://www.universiteitleiden.nl/en/staffmembers/mitra-baratchi">Baratchi M.</a> (Lecturer) <i>Machine Learning</i>: Feb. 2020-June 2021.<br><span class="type">Guest lecture, Bachelor Artificial Intelligence, 2nd year</span></li>
+          </ul>
+        </p>
+
+      </article>
+    </div>
+  </div>
+  <footer style="margin-top:30px;">
+  </footer>
+</body>
+</html>
